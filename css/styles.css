@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  max-width: 1158px;
+  /* max-width: 1158px; */
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -94,7 +94,7 @@ button {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .section-portfolio {
@@ -111,7 +111,6 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris);
-  margin-right: 76px;
   display: flex;
   padding: 24px 0;
 }
@@ -133,7 +132,131 @@ button {
   text-transform: uppercase;
   color: var(--iris);
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 17.5px;
+  font-style: normal;
+}
+
+.hamburger {
+  fill: var(--navyblue);
+}
+
+.menu-btn-open {
+  background-color: transparent;
+  border: none;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--white);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  width: 100vw;
+  height: 100vh;
+  padding: 24px 24px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn-close {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 32px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  fill: var(--navyblue);
+}
+
+.navigation-mob {
+}
+
+.menu-mob-space:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.menu-mob {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+.menu-mob-item {
+  color: var(--navyblue);
+}
+
+.accent {
+  color: var(--ocean);
+}
+
+.contacts-item-mob {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: auto;
+  margin-bottom: 48px;
+}
+
+.contacts-item-mob-tel {
+  color: var(--iris);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+.contacts-item-mob-mail {
+  color: var(--slate);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.social-mob-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+}
+
+.social-mob-menu-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-mob-description {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons-mob-menu {
+  fill: var(--cloud);
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .header-general {
@@ -148,107 +271,49 @@ button {
   justify-content: space-between;
 }
 
-.header-menu {
-  display: flex;
-  gap: 40px;
-}
-
-.navigation-general {
-  display: flex;
-  align-items: center;
-}
-
-.navigation {
-  display: block;
-  padding: 24px 0;
-  color: var(--navyblue);
-  font-weight: 500;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-a:hover.navigation,
-a:focus.navigation,
-a:active.navigation {
-  color: var(--ocean);
-  transition: color 250ms cubic-bezier(0.4 0 0.2 1);
-}
-
-.current {
-  color: var(--ocean);
-  position: relative;
-}
-
-.current::after {
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--ocean);
-}
-
-.navigation-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-a.currnet-color {
-  color: var(--ocean);
-}
-
-.contacts {
-  font-style: normal;
-}
-
+.header-menu,
 .contacts-item {
-  display: flex;
-  gap: 40px;
-  margin-left: auto;
-}
-
-.contacts a {
-  color: var(--slate);
-}
-
-.contacts a:hover,
-.contacts a:focus,
-.contacts a:active {
-  color: var(--ocean);
-  transition: color 250ms cubic-bezier(0.4 0 0.2 1);
-  text-decoration: none;
+  display: none;
 }
 
 /* ------HERO------- */
 .hero {
-  max-width: 1440px;
+  max-width: 438px;
   margin: 0 auto;
   background: var(--navyblue);
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  text-align: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-mob-2x.jpg);
+  }
+}
+
 .hero-header {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--white);
   max-width: 496px;
-  margin: 0 auto 48px auto;
+  margin-bottom: 72px;
 }
 
 .hero-button {
@@ -281,11 +346,13 @@ a.currnet-color {
 
 .features-items {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .features-items-width {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  text-align: center;
 }
 
 .features-icons {
@@ -297,12 +364,13 @@ a.currnet-color {
   background: var(--cloud);
   margin-bottom: 8px;
   border-radius: 4px;
+  display: none;
 }
 
 .features-name {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--navyblue);
   margin-bottom: 8px;
@@ -310,6 +378,10 @@ a.currnet-color {
 
 .features {
   color: var(--slate);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* ------ PRODUCTS  -----  */
@@ -325,6 +397,7 @@ a.currnet-color {
 
 .about-general {
   padding-bottom: 120px;
+  display: none;
 }
 
 .about {
@@ -345,11 +418,13 @@ a.currnet-color {
 
 .team-card {
   background-color: var(--white);
-  /* padding: 32px 0; */
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  width: 100%;
+  max-width: 264px;
+  margin: 0 auto;
 }
 
 .team-name {
@@ -365,7 +440,9 @@ a.currnet-color {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  gap: 72px;
   text-align: center;
 }
 
@@ -430,6 +507,8 @@ a.currnet-color {
   transition: background-color 250ms cubic-bezier(0.4 0 0.2 1);
 }
 
+/* --------------- CUSTOMERS ------------------ */
+
 .customers-title {
   margin-bottom: 72px;
   font-size: 36px;
@@ -439,11 +518,13 @@ a.currnet-color {
 
 .customers {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  row-gap: 72px;
 }
 
 .customers-items {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
@@ -581,20 +662,23 @@ a.currnet-color {
 .footer {
   color: var(--cloud);
   background-color: var(--navyblue);
-  padding: 100px 0;
-}
-
-.footer-main {
-  display: flex;
-  align-items: baseline;
+  padding-top: 97.5px;
+  padding-bottom: 96px;
+  text-align: center;
 }
 
 .footer-wrap {
-  margin-right: 120px;
+  padding: 0 auto;
 }
 
 .footer-text {
-  max-width: 264px;
+  max-width: 268px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-socials {
+  margin: 72px auto;
 }
 
 .footer-socials-title {
@@ -606,6 +690,7 @@ a.currnet-color {
 .footer-social-list {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 .footer-social-link {
@@ -641,16 +726,16 @@ a.currnet-color {
 }
 
 .subscribe-form {
-  display: flex;
   gap: 24px;
 }
 
 .subscribe-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid var(--white);
+  opacity: 0.3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: var(--white);
   padding-left: 16px;
@@ -665,6 +750,7 @@ a.currnet-color {
 
 .subscribe-input::placeholder {
   color: var(--white);
+  opacity: 0.6;
 }
 
 .subscribe-btn {
@@ -688,6 +774,7 @@ a.currnet-color {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 16px auto 0 auto;
 }
 
 .subscribe-btn:hover,
@@ -721,13 +808,13 @@ a.currnet-color {
 }
 
 .modal-window {
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 16px 16px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 408px;
   min-height: 584px;
+  min-width: 392px;
   background: var(--diary);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);

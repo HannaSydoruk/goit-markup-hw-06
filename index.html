@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,6 +13,7 @@
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media.css">
     <meta name="description" content="Studio">
     <title>Studio</title>
 
@@ -24,7 +26,7 @@
             <nav class="navigation-general">
                 <a class="logo-web link" href="./index.html">Web<span class="logo-studio-dark">Studio</span></a>
                 <ul class="header-menu list">
-                    <li class>
+                    <li>
                         <a href="./index.html" class="navigation link current">Studio</a>
                     </li>
                     <li>
@@ -45,7 +47,82 @@
                     </li>
                 </ul>
             </address>
+
+            <button type="button" class="menu-btn-open js-open-menu">
+                <svg class="hamburger" width="32" height="22">
+                    <use href="./images/icons.svg#icon-menu-hamburger">
+                    </use>
+            </button>
         </div>
+        <div class="mob-menu is-hidden js-menu-container">
+            <div>
+                <button type="button" class="menu-btn-close js-close-menu">
+                    <svg width="8" height="8" class="modal-icon">
+                        <use href="./images/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <nav class="navigation-mob">
+                    <ul class="menu-mob list">
+                        <li class="menu-mob-space">
+                            <a href="./index.html" class="menu-mob-item link accent">Studio</a>
+                        </li>
+                        <li class="menu-mob-space">
+                            <a href="./portfolio.html" class="menu-mob-item link">Portfolio</a>
+                        </li>
+                        <li class="menu-mob-space">
+                            <a href="" class="menu-mob-item link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div>
+                <ul class="contacts-item-mob list">
+                    <li>
+                        <a href="tel:+110001111111" class="contacts-item-mob-tel link">+11 (000) 111-11-11</a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@devstudio.com" class="contacts-item-mob-mail link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="list social-mob-menu">
+                    <li class="social-mob-menu-item">
+                        <a href="" class="social-mob-description">
+                            <svg class="social-icons-mob-menu" width="24" height="24">
+                                <use href="./images/icons.svg#instagram">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-mob-menu-item">
+                        <a href="" class="social-mob-description">
+                            <svg class="social-icons-mob-menu" width="24" height="24">
+                                <use href="./images/icons.svg#twitter">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-mob-menu-item">
+                        <a href="" class="social-mob-description">
+                            <svg class="social-icons-mob-menu" width="24" height="24">
+                                <use href="./images/icons.svg#facebook">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-mob-menu-item">
+                        <a href="" class="social-mob-description">
+                            <svg class="social-icons-mob-menu" width="24" height="24">
+                                <use href="./images/icons.svg#linkedin">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
     </header>
 
     <main>
@@ -122,13 +199,16 @@
                 <h2 class="about">What are we doing</h2>
                 <ul class="products list">
                     <li class="products-items">
-                        <img src="./images/img1.jpg" alt="desktop" width="360" height="300">
+                        <img srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x" src="./images/img1.jpg"
+                            alt="desktop" width="360" height="300">
                     </li>
                     <li class="products-items">
-                        <img src="./images/img2.jpg" alt="mobile apps" width="360" height="300">
+                        <img srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x" src="./images/img2.jpg"
+                            alt="mobile apps" width="360" height="300">
                     </li>
                     <li class="products-items">
-                        <img src="./images/img3.jpg" alt="synchronize devices" width="360" height="300">
+                        <img srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x" src="./images/img3.jpg"
+                            alt="synchronize devices" width="360" height="300">
                     </li>
                 </ul>
             </div>
@@ -139,7 +219,8 @@
                 <h2 class="team-name">Our Team</h2>
                 <ul class="team-list list">
                     <li class="team-card">
-                        <img src="./images/markguerrero.jpg" alt="Mark Guerrero" width="264" height="260">
+                        <img srcset="./images/markguerrero.jpg 1x, ./images/markguerrero-2x.jpg 2x"
+                            src="./images/markguerrero.jpg" alt="Mark Guerrero" width="264" height="260">
                         <div class="card-content">
                             <h3 class="team-person-name">Mark Guerrero</h3>
                             <p class="team-person-position">Product Designer</p>
@@ -182,7 +263,8 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/tomford.jpg" alt="Tom Ford" width="264" height="260">
+                        <img srcset="./images/tomford.jpg 1x, ./images/tomford-2x.jpg 2x" src="./images/tomford.jpg"
+                            alt="Tom Ford" width="264" height="260">
                         <div class="card-content">
                             <h3 class="team-person-name">Tom Ford</h3>
                             <p class="team-person-position">Frontend Developer</p>
@@ -223,7 +305,8 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/camilagarcia.jpg" alt="Camila Garcia" width="264" height="260">
+                        <img srcset="./images/camilagarcia.jpg 1x, ./images/camilagarcia-2x.jpg 2x"
+                            src="./images/camilagarcia.jpg" alt="Camila Garcia" width="264" height="260">
                         <div class="card-content">
                             <h3 class="team-person-name">Camila Garcia</h3>
                             <p class="team-person-position">Marketing</p>
@@ -264,7 +347,8 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/danielwilson.jpg" alt="Daniel Wilson" width="264" height="260">
+                        <img srcset="./images/danielwilson.jpg 1x, ./images/danielwilson-2x.jpg 2x"
+                            src="./images/danielwilson.jpg" alt="Daniel Wilson" width="264" height="260">
                         <div class="card-content">
                             <h3 class="team-person-name">Daniel Wilson</h3>
                             <p class="team-person-position">UI Designer</p>
@@ -496,6 +580,10 @@
 
 
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
